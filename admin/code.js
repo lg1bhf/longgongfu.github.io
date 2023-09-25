@@ -1,15 +1,12 @@
-workbook = excel.workbook
-summary = worksheet("總表")
-
 function worksheet (name) {
   // OK
-  return workbook.worksheets.getItem(name)
+  return excel.workbook.worksheets.getItem(name)
 }
 
 function coverage (start) {
   // OK
   if (start) {
-    workbookName = workbook.name
+    workbookName = excel.workbook.name
     thisYear = Number(workbookName.substring(0, 4))
     thisMonth = Number(workbookName.substring(5, 7))
     if (thisMonth < 12) {
@@ -30,6 +27,7 @@ function coverage (start) {
 
 function hide () {
   // OK
+  summary = worksheet("總表")
   for (r = 2; r <= 30; r++) {
     start = val(summary, r, 3)
     if (start) {
@@ -54,6 +52,7 @@ function hide () {
 
 function readings (phone) {
   // OK
+  summary = worksheet("總表")
   result = []
   i = 2
   while (val(summary, i, 1)) {
@@ -77,8 +76,9 @@ function rooms (phone) {
 
 function search (colNum) {
   // OK
+  summary = worksheet("總表")
   for (rowNum = 1; rowNum <= 1000; rowNum++) {
-    if (val(summary, rowNum, 1) == workbook.worksheets.getActiveSheet().name) {
+    if (val(summary, rowNum, 1) == excel.workbook.worksheets.getActiveSheet().name) {
       return val(summary, rowNum, colNum)
     }
   }
@@ -96,7 +96,7 @@ function val (sheet, r, c, value=null) {
 
 function unhide () {
   // OK
-  for (worksheet of workbook.worksheets.items) {
+  for (worksheet of excel.workbook.worksheets.items) {
     worksheet.visibility = Excel.SheetVisibility.visible
   }
 }
