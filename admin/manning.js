@@ -1,10 +1,8 @@
 function worksheet (name) {
-  // OK
   return excel.workbook.worksheets.getItem(name)
 }
 
 function coverage (start) {
-  // OK
   if (start) {
     workbookName = excel.workbook.name
     thisYear = Number(workbookName.substring(0, 4))
@@ -26,7 +24,6 @@ function coverage (start) {
 }
 
 function hide () {
-  // OK
   summary = worksheet("總表")
   for (r = 2; r <= 30; r++) {
     start = val(summary, r, 3)
@@ -51,7 +48,6 @@ function hide () {
 }
 
 function readings (phone) {
-  // OK
   summary = worksheet("總表")
   result = []
   i = 2
@@ -68,7 +64,6 @@ function readings (phone) {
 }
 
 function rooms (phone) {
-  // OK
   return readings(phone).map(function (reading) {
     return reading.substring(0, 4)
   }).join(" / ")
