@@ -3,7 +3,7 @@
                 <meta charset="utf-8">
                 <meta name="viewport" content="width=device-width, initial-scale=1">
                 <title>瓏宮</title>
-                <link rel="icon" href="./files/logo.png">
+                <link rel="icon" href="../files/logo.png">
                 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
                 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -19,8 +19,8 @@
                         <div class="w3-top">
                                 <div class="w3-bar w3-theme-d2 w3-left-align" style="font-size: 20px; display: flex;">
                                         <div style="margin-right: auto;">
-                                                <a href="./" class="w3-bar-item w3-button w3-teal" style="display: flex; padding: 10px;">
-                                                        <img src="./files/logo.png" style="width: 30px; margin-top: auto; margin-bottom: auto; margin-right: 10px;">
+                                                <a href="../" class="w3-bar-item w3-button w3-teal" style="display: flex; padding: 10px;">
+                                                        <img src="../files/logo.png" style="width: 30px; margin-top: auto; margin-bottom: auto; margin-right: 10px;">
                                                         瓏宮
                                                 </a>
                                         </div>
@@ -29,78 +29,6 @@
                                 </div>
                         </div>
                 </div>
-                <div id="content" style="padding-top: 50px; min-height: calc(100% - 60px);">
-                        <div class="w3-display-container w3-animate-opacity">
-                                <img src="./files/cover.png" style="width: 100%;">
-                                <div class="w3-container w3-display-bottomleft w3-margin-bottom">
-                                        <a href="#about" class="w3-button w3-xlarge w3-theme w3-hover-teal">了解更多</a>
-                                </div>
-                        </div>
-                        <div id="latest" style="margin-bottom: -50px;">
-                                <div class="w3-row-padding w3-padding-16">
-                                        <h2 class="w3-center">最新消息</h2>
-                                        <ul class="latest" style="padding-right: 25px;"></ul>
-                                </div>
-                        </div>
-                        <div id="about" style="padding-top: 50px;">
-                                <div class="w3-row-padding w3-padding-16 w3-theme-l1">
-                                        <h2 class="w3-center">關於我們</h2>
-                                        <div class="about" style="padding-left: 25px; padding-right: 25px;"></div>
-                                </div>        
-                        </div>
-                        <div id="contact">
-                                <div class="w3-row-padding w3-padding-16 w3-center">
-                                        <h2>聯絡我們</h2>
-                                        <p>觀塘鴻圖道 60 號鴻福大廈 1 樓 B 室</p>
-                                        <p>
-                                                <a href="tel:+85221171013">2117 1013</a>
-                                                <span> 或 </span>
-                                                <a href="tel:+85239051444">3905 1444</a>
-                                                <span> 或 </span>
-                                                <a href="tel:+85239031115">3903 1115</a>
-                                        </p>
-                                        <p><a href="https://www.facebook.com/longgongfu">https://www.facebook.com/longgongfu</a></p>
-                                </div>
-                        </div>
-                </div>
-                <div id="footer">
-                        <div class="w3-row-padding w3-padding-16 w3-theme-d1 w3-center">
-                                <div style="display: flex;">
-                                        <div style="height: 28px; margin: auto;">
-                                                @ <span id="year"></span>
-                                        </div>
-                                </div>
-                          </div>
-                </div>
-                <script>
-                        $(function () {
-                
-                                fetch("./files/latest.txt").then(function (response) {
-                                        return response.text()
-                                }).then(function (text) {
-                                        html = ""
-                                        arr = text.split("\r\n\r\n")
-                                        for (el of arr) {
-                                                html = html + "<li style='text-align: justify;'>" + el + "</li>"
-                                        }
-                                        $(".latest").html(html)
-                                 })
-                
-                                fetch("./files/about.txt").then(function (response) {
-                                        return response.text()
-                                }).then(function (text) {
-                                        html = ""
-                                        arr = text.split("\r\n\r\n")
-                                        for (el of arr) {
-                                                html = html + "<p style='text-align: justify;'>" + el + "</p>"
-                                        }
-                                        $(".about").html(html)
-                                })
-                
-                                d = new Date()
-                                $("#year").text(d.getFullYear())
-                
-                        })
-                </script>
+                <script src="./main.js"></script>
         </body>
 </html>
