@@ -1,0 +1,19 @@
+{
+	"short_name": "智富數",
+	"name": "智富數",
+	"icons": [
+		{
+			"src": "../images/512x512.png",
+			"sizes": "512x512",
+			"type": "image/png"
+		},
+		{
+			"src": "../images/192x192.png",
+			"sizes": "192x192",
+			"type": "image/png"
+		}
+	],
+	"start_url": "./",
+	"display": "standalone",
+	"background_color": "#FFFFFF"
+}
