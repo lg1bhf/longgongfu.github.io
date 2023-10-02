@@ -26,17 +26,20 @@
                         <div class="w3-top">
                                 <div class="w3-bar w3-theme-d2 w3-left-align" style="font-size: 20px; display: flex;">
                                         <div style="margin-right: auto;">
-                                                <a href="../" class="w3-bar-item w3-button w3-teal" style="display: flex; padding: 10px;">
+                                                <a href="https://dropbox.com" class="w3-bar-item w3-button w3-teal" style="display: flex; padding: 10px;">
                                                         <img src="../files/512x512.png" style="width: 30px; margin-top: auto; margin-bottom: auto; margin-right: 10px;">
-                                                        瓏宮
-                                                </a>
+                                                        文檔
+						</a>
                                         </div>
-                                        <a href="#about" class="w3-bar-item w3-button w3-hover-white" style="padding: 10px;">關於我們</a>
-                                        <a href="#contact" class="w3-bar-item w3-button w3-hover-white" style="padding: 10px;">聯絡我們</a>
+                                        <a id="manning" onclick="show($(this))" class="w3-bar-item w3-button w3-hover-white" style="padding: 10px;">萬年</a>
                                 </div>
                         </div>
                 </div>
 		<iframe style="border: none;"></iframe>
-                <script src="./main.js"></script>
+                <script>
+			function show (s) {
+				$("iframe").attr("src", s.attr("id") + ".longgongfu.com.hk")
+			}
+		</script>
         </body>
 </html>
